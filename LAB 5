@@ -1,0 +1,75 @@
+TO FIND FACTORIAL:
+#!/bin/bash
+echo "enter number"
+read n
+fact=1
+i=1
+while [ $i -le $n ]
+do
+fact=`expr $i \* $fact`
+i=`expr $i + 1`
+done
+echo "the factorial number of $n is $fact"
+
+TO FIND GROSS SALARY:
+#!/bin/bash
+echo "enter the basic salary of the employee"
+read sal
+da=`expr $sal \* 10 / 100`
+hr=`expr $sal \* 20 / 100`
+gr=`expr $sal + $da + $hr`
+echo "gross salary = $gr"
+
+TO CONVERT TEMP TO FAHRENHEIT:
+#!/bin/bash
+echo "enter temperature in fahrenheit"
+read f
+temp=`expr $f - 32`
+c=`expr $temp \* 5 / 9`
+echo "temperature in celcius = $c"
+
+TO PERFORM ARITHMETIC OPERATIONS ON TWO NUMBERS:
+!/bin/bash
+echo "enter first number"
+read a 
+echo "enter second number"
+read b
+echo "choose operation: 1)add 2)subtract 3)multiplication 4)division 5)exitt"
+read choice
+case $choice in
+1) echo "sum=`expr $a + $b`";;
+2) echo "after subtraction=`expr $a - $b`";;
+3) echo "product=`expr $a \* $b`";;
+4) echo "quotient=`expr $a / $b`";;
+5)exit;;
+esac
+
+TO FIND SUM OF EVEN NUMBERS UPTO N:                                                                                            
+#!/bin/bash
+echo "enter last number"
+read n
+i=2
+while [ $i -lt $n ]
+do
+sum=`expr $sum + $i`
+i=`expr $i + 2`
+done
+echo "sum is= $sum"
+
+TO PRINT NOS FROM 5 TO 10:
+#!/bin/bash
+i=5
+while [ $i -le 10 ]
+do
+echo "$i"
+i=`expr $i + 1`
+done
+
+TO PRINT NOS 1 TO 5:
+#!/bin/bash
+i=1
+while [ $i -le 5 ]
+do
+echo "$i"
+i=`expr $i + 1`
+done
